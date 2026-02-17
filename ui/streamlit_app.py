@@ -22,7 +22,7 @@ def run_app():
             "Builder – Automóviles",
             "Bridge – Notificaciones",
             "Mediator – Chat",
-            "Diagramas C4"
+            "Diagrama de Clases"
         ]
     )
 
@@ -104,5 +104,5 @@ def run_app():
             st.info("No hay mensajes aún.")
 
     # --- DIAGRAMAS ---
-    elif opcion == "Diagramas C4":
+    elif opcion == "Diagrama de Clases":
         mostrar_diagramas()
