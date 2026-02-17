@@ -14,7 +14,7 @@ def run_app():
         layout="wide"
     )
 
-    st.title("🛠️ Demostración de Patrones de Diseño")
+    st.title("Demostración de Patrones de Diseño")
 
     opcion = st.sidebar.radio(
         "Seleccione un módulo:",
@@ -26,7 +26,7 @@ def run_app():
         ]
     )
 
-    # --- BUILDER ---
+    # --- Builder, Tipo: Creacional---
     if opcion == "Builder – Automóviles":
         st.header("Configurador de Automóvil")
         motor = st.selectbox("Motor", ["V6", "V8", "Eléctrico"])
@@ -47,7 +47,7 @@ def run_app():
         auto = builder.build()
         st.json(vars(auto))
 
-    # --- BRIDGE ---
+    # --- Bridge, Tipo: Estructural ---
     elif opcion == "Bridge – Notificaciones":
         st.header("Sistema de Notificaciones")
 
@@ -66,23 +66,42 @@ def run_app():
         if st.button("Enviar"):
             st.success(notificacion.emitir(mensaje))
 
-    # --- MEDIATOR ---
+    # --- Mediator, Tipo: Comportamiento ---
+    #corrección de error dado que no estaba presentando la información
+    #al enviar la acción de la sala de chat.
     elif opcion == "Mediator – Chat":
         st.header("Sala de Chat")
 
+        # Crear solo sala  si no existe
         if "sala" not in st.session_state:
             st.session_state.sala = SalaChat()
 
+        if not isinstance(st.session_state.sala.usuarios, dict):
+            st.session_state.sala.usuarios = {}
+
+        # Inputs
         nombre = st.text_input("Nombre", "Usuario_1")
         mensaje = st.text_area("Mensaje")
 
+        # Botón enviar
         if st.button("Enviar"):
-            usuario = Usuario(nombre, st.session_state.sala)
-            usuario.enviar(mensaje)
+            if mensaje.strip():
+                usuario = Usuario(nombre, st.session_state.sala)
+                usuario.enviar(mensaje)
+                #st.rerun()
+                #pruba dado que no se visualizaba los usuarios.
+                st.write("DEBUG", st.session_state.sala.historial)
 
-        st.subheader("Historial")
-        for m in st.session_state.sala.historial:
-            st.write(m)
+        # Mostrar historial
+        st.subheader("Usuarios conectados")
+        for u in st.session_state.sala.usuarios.keys():
+            st.write(f"• {u}")
+
+        if st.session_state.sala.historial:
+            for m in st.session_state.sala.historial:
+                st.write(m)
+        else:
+            st.info("No hay mensajes aún.")
 
     # --- DIAGRAMAS ---
     elif opcion == "Diagramas C4":

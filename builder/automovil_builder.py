@@ -1,3 +1,5 @@
+#Define la interfaz para la construcción paso a paso del objeto Automovil.
+#permite separar el proceso de construcción de su representación final.
 from abc import ABC, abstractmethod
 from builder.automovil import Automovil
 

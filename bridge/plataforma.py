@@ -1,3 +1,4 @@
+#implementación del patron bridge. Se define la interfaz com[un para todas las plataformas.
 from abc import ABC, abstractmethod
 
 class Plataforma(ABC):
@@ -6,11 +7,9 @@ class Plataforma(ABC):
     def enviar(self, contenido: str) -> str:
         pass
 
-
 class Web(Plataforma):
     def enviar(self, contenido: str) -> str:
         return f"[Web] Renderizando en DOM: {contenido}"
-
 
 class Movil(Plataforma):
     def enviar(self, contenido: str) -> str:
