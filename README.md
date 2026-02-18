@@ -23,16 +23,16 @@ El objetivo de esta actividad es identificar, seleccionar, diseñar e implementa
 
 ## Guía de Instalación y Ejecución
 
-Sigue estos pasos para descargar y ejecutar la aplicación en tu entorno local:
+Siga estos pasos para descargar y ejecutar la aplicación en su entorno local:
 
 ### 1. Clonar el Repositorio (u obtener el código)
 
-Si tienes acceso al repositorio git:
+Se tiene acceso al repositorio git:
 ```bash
 git clone https://github.com/mauro-reyes/Actividad1MaestriaSoftwareI.git
 cd Actividad1MaestriaSoftwareI
 ```
-Si tienes el código comprimido (`.zip`), descomprímelo y navega a la carpeta raíz del proyecto en tu terminal.
+Si tiene el código comprimido (`.zip`), descomprímalo y navegue a la carpeta raíz del proyecto en tu terminal.
 
 ### 2. Crear un Entorno Virtual (Recomendado)
 
@@ -52,7 +52,7 @@ python -m venv venv
 
 ### 3. Instalar Dependencias
 
-Asegúrate de que `pip` esté actualizado e instala los requerimientos:
+Asegúrese de que `pip` esté actualizado e instala los requerimientos:
 
 ```bash
 pip install --upgrade pip
@@ -65,7 +65,7 @@ pip install streamlit pypdf
 
 ### 4. Ejecutar la Aplicación
 
-Lanza el servidor de Streamlit con el siguiente comando:
+Despliegue el servidor de Streamlit con el siguiente comando:
 
 ```bash
 python3 -m streamlit run main.py
@@ -73,6 +73,6 @@ python3 -m streamlit run main.py
 
 ### 5. Acceder a la Aplicación
 
-Una vez ejecutado el comando, Streamlit abrirá automáticamente la aplicación en tu navegador por defecto. Si no lo hace, accede manualmente a la URL que se muestra en la terminal, usualmente:
+Una vez ejecutado el comando, Streamlit abrirá automáticamente la aplicación en su navegador por defecto. Si no lo hace, accede manualmente a la URL que se muestra en la terminal, usualmente:
 
 *   **Local URL**: http://localhost:8501
