@@ -4,7 +4,9 @@ Este repositorio contiene la solución para la **Actividad 1: Patrones de Diseñ
 
 ## Integrantes del Grupo
 *   **Abdul Mauricio Reyes**
-*   **Wilmer Ricardo Castro D**
+*   **Wilmer Ricardo Castro Delgadillo**
+*   **Luis Felipe Mora Lobo**
+*   **Manuel Alejandro Ovalle**
 
 ## Descripción del Proyecto
 
