@@ -24,7 +24,7 @@ def mostrar_diagramas():
             Al observar el diagrama, vemos que la clase `AutomovilBuilderConcreto` hereda de la interfaz `AutomovilBuilder`. Esto significa que el concreto *es un* tipo de constructor que debe cumplir con el contrato definido. A su vez, notamos una línea punteada que va desde el Builder hacia `Automovil`, indicando que el objetivo final de este constructor es crear instancias de `Automovil`, el cual es nuestro producto complejo.
 
             ### Análisis Arquitectónico
-            El patrón Builder nos permite separar la construcción de un objeto de su representación final. Observa cómo `Automovil` mantiene sus propiedades encapsuladas (privadas, marcadas con el guion `-`), y solo son accesibles mediante métodos controlados. Esto garantiza que nadie pueda alterar el estado del auto de forma indebida una vez construido.
+            El patrón Builder nos permite separar la construcción de un objeto de su representación final, podemos observar cómo `Automovil` mantiene sus propiedades encapsuladas (privadas, marcadas con el guion `-`), y solo son accesibles mediante métodos controlados. Esto garantiza que nadie pueda alterar el estado del auto de forma indebida una vez construido.
 
             ### Cumplimiento de Principios SOLID
             *   **SRP (Principio de Responsabilidad Única)**: La clase `Automovil` es puramente un contenedor de datos, mientras que toda la lógica de "cómo se crea" reside exclusivamente en el Builder.
@@ -63,7 +63,7 @@ def mostrar_diagramas():
         st.markdown(
             """
             ### Lectura del Diagrama
-            El diagrama nos muestra a `SalaChat` como el centro neurálgico de la comunicación. Las flechas indican una relación interesante: la Sala *conoce* (agrega) a múltiples objetos `Usuario`, y a su vez, cada `Usuario` tiene una referencia hacia la `Sala`. Es una relación bidireccional necesaria para que este patrón funcione.
+            El diagrama nos muestra a `SalaChat` como el centro neurálgico de la comunicación. Las flechas indican una relación: la Sala *conoce* (agrega) a múltiples objetos `Usuario`, y a su vez, cada `Usuario` tiene una referencia hacia la `Sala`. Es una relación bidireccional necesaria para que este patrón funcione.
 
             ### Análisis Arquitectónico
             El Mediador centraliza toda la lógica de comunicación. Los usuarios no necesitan conectarse entre ellos directamente; solo "hablan" con la sala. Esto transforma una potencial "red de araña" (todos contra todos) en una estructura de estrella, mucho más ordenada y fácil de mantener.
