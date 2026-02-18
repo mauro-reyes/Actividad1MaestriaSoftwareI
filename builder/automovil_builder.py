@@ -27,37 +27,37 @@ class AutomovilBuilder(ABC):
 class AutomovilBuilderConcreto(AutomovilBuilder):
 
     def __init__(self):
-        self.motor = "Estándar"
-        self.color = "Blanco"
-        self.llantas = "R15"
-        self.gps = False
-        self.techo = False
+        self._motor = "Estándar"
+        self._color = "Blanco"
+        self._llantas = "R15"
+        self._gps = False
+        self._techo = False
 
     def set_motor(self, motor):
-        self.motor = motor
+        self._motor = motor
         return self
 
     def set_color(self, color):
-        self.color = color
+        self._color = color
         return self
 
     def set_llantas(self, llantas):
-        self.llantas = llantas
+        self._llantas = llantas
         return self
 
     def set_gps(self, gps):
-        self.gps = gps
+        self._gps = gps
         return self
 
     def set_techo(self, techo):
-        self.techo = techo
+        self._techo = techo
         return self
 
     def build(self):
         return Automovil(
-            self.motor,
-            self.color,
-            self.llantas,
-            self.gps,
-            self.techo
+            self._motor,
+            self._color,
+            self._llantas,
+            self._gps,
+            self._techo
         )

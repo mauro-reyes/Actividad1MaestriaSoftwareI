@@ -1,6 +1,7 @@
 import streamlit as st
 
 from ui.diagramas_view import mostrar_diagramas
+from ui.sustentacion_view import mostrar_sustentacion
 from builder.automovil_builder import AutomovilBuilderConcreto
 from bridge.plataforma import Web, Movil
 from bridge.notificacion import AlertaCritica, MensajeInformativo
@@ -19,15 +20,24 @@ def run_app():
     opcion = st.sidebar.radio(
         "Seleccione un módulo:",
         [
+            "Sustentación",
+            "Diagrama de Clases",
             "Builder – Automóviles",
             "Bridge – Notificaciones",
-            "Mediator – Chat",
-            "Diagramas C4"
+            "Mediator – Chat"
         ]
     )
 
+    # --- SUSTENTACIÓN ---
+    if opcion == "Sustentación":
+        mostrar_sustentacion()
+
+    # --- DIAGRAMAS ---
+    elif opcion == "Diagrama de Clases":
+        mostrar_diagramas()
+
     # --- Builder, Tipo: Creacional---
-    if opcion == "Builder – Automóviles":
+    elif opcion == "Builder – Automóviles":
         st.header("Configurador de Automóvil")
         motor = st.selectbox("Motor", ["V6", "V8", "Eléctrico"])
         color = st.color_picker("Color", "#FFFFFF")
@@ -102,7 +112,3 @@ def run_app():
                 st.write(m)
         else:
             st.info("No hay mensajes aún.")
-
-    # --- DIAGRAMAS ---
-    elif opcion == "Diagramas C4":
-        mostrar_diagramas()
