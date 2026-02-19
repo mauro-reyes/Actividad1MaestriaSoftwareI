@@ -2,11 +2,12 @@
 
 Este repositorio contiene la solución para la **Actividad 1: Patrones de Diseño** de la Maestría en Arquitectura de Software. El proyecto implementa y demuestra tres patrones de diseño fundamentales utilizando Python y una interfaz interactiva desarrollada en Streamlit.
 
-## Integrantes del Grupo
+## Integrantes del Grupo 11
 *   **Abdul Mauricio Reyes**
 *   **Wilmer Ricardo Castro Delgadillo**
 *   **Luis Felipe Mora Lobo**
 *   **Manuel Alejandro Ovalle**
+*   **Daniel Alexander Rodriguez**
 
 ## Descripción del Proyecto
 
