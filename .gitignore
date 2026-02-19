@@ -1,2 +1,18 @@
+<<<<<<< HEAD
 __pycache__/
 *.pyc
+=======
+# Mac
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+>>>>>>> c7ec7ac (Agregue el gitignore y agregue los comandos para la limpieza de la cache de los archivos)
